@@ -1,0 +1,4 @@
+abra o cmd
+digite ping exemple.com
+ou ipconfig
+ipconfig voce tem que tar conectado na internet da vitima

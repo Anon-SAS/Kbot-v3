@@ -1,0 +1,9 @@
+Abra esse link
+https://appget.net/
+Aperte em download
+
+Abra e baixe
+Abra o cmd
+Digite Appget Install Git
+Apos baixar abra a pasta que voce queira usar o terminal
+Aperte botao direito e em git bash here

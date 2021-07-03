@@ -1,0 +1,4 @@
+abra o cmd
+digite ping -l- 65500 -t seu ip
+exemple
+ping -l- 65500 -t 45.645.675
