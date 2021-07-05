@@ -19,8 +19,9 @@ echo  =====================================
 echo  * 1. Mudar Cor                      *
 echo  * 2. Downloads                      *
 echo  * 3. +Opcoes                        *
-echo  * 4. Redes Sociais                  *
-echo  * 5. Sair                           *
+echo  * 4. Scripts                        *
+echo  * 5. Redes Sociais                  *
+echo  * 6. Sair                           *
 echo  =====================================
 echo.
 
@@ -32,35 +33,29 @@ if %fds% equ 2 goto op2
 if %fds% equ 3 goto op3
 if %fds% equ 4 goto op4
 if %fds% equ 5 goto op5
+if %fds% equ 6 goto op6
 
 :op1
 goto menu
 
-pause
-goto menu
-
 :op2
-goto menu4:
+goto menu4
 cls
-
-goto menu
 
 :op3
 cls
-
-goto menu
-
-:op4
 goto menu3
 
-:op5
-echo.
-echo  voce tem certeza que quer Sair
-echo.
+:op4
+cls
+goto menu5
 
-set /p j=S/N: 
-if %fds% equ S exit
-if %fds% equ N goto menu
+:op5
+goto menu2
+
+:op6
+cls
+exit
 
 :menu2
 cls
@@ -81,7 +76,7 @@ echo  * 3. Voltar                         *
 echo  =====================================
 echo.
 
-set /p fd= Escolha Sua Opcao: 
+set /p fds= Escolha Sua Opcao: 
 echo ----------------------------
 if %fds% equ 1 goto o1
 if %fds% equ 2 goto o2
@@ -182,11 +177,11 @@ if %fds% equ 2 goto t2
 if %fds% equ 3 goto t3
 if %fds% equ 4 goto t4
 if %fds% equ 5 goto t5
-if %fds% equ 1 goto t6
-if %fds% equ 2 goto t7
-if %fds% equ 3 goto t8
-if %fds% equ 4 goto t9
-if %fds% equ 5 goto t10
+if %fds% equ 6 goto t6
+if %fds% equ 7 goto t7
+if %fds% equ 8 goto t8
+if %fds% equ 9 goto t9
+if %fds% equ 10 goto t10
 
 :t1
 start https://download1476.mediafire.com/nvazw3gxf4mg/mu1kae8tdvtekfz/Derrubar+Net.rar
@@ -226,4 +221,73 @@ start https://download1349.mediafire.com/cemvh0h9tkog/xbv6jj7k481l0dj/Ajudante+P
 goto menu4
 
 :t10
+cls
+goto menu
+
+:menu5
+cls
+Set /a num=(%Random% %%9)+1
+color %num%
+date /t
+
+echo.
+echo Computador: %computername% * %username%  Usuario: %root%
+echo.
+
+echo.
+echo            BY SAS
+echo  =====================================
+echo  * 1. Derrubar Net                   *
+echo  * 2. Ping                           *
+echo  * 3. Juntar arquivos                * 
+echo  * 4. Voltar                         *
+echo  =====================================
+echo.
+
+
+set /p fds= Escolha Sua Opcao: 
+echo ----------------------------
+if %fds% equ 1 goto y1
+if %fds% equ 2 goto y2
+if %fds% equ 3 goto y3
+if %fds% equ 4 goto y4
+
+:y1
+cls
+set /p v=Ip ou Link: 
+ping -l- 65500 -t %v%
+goto menu5
+
+:y2
+cls
+set /p f=Link ou Ip: 
+ping %f%
+pause
+goto menu5
+
+:y3
+cls
+echo.
+echo  Recomendo Desktop
+echo.
+set /p h=Local do arquivo: 
+set /p j=Nome do Arquivo: 
+set /p g=Nome do Arquivo que vai juntar: 
+cls
+echo.
+echo exemple: meuarquivo.exe .bat .txt .py etc
+echo.
+set /p m=Nome do arquivo que vai ficar com os dois: 
+cd %h%
+copy /b %j% + "%g%" %m%
+cls
+color f0
+echo.
+echo sucess
+echo.
+pause
+goto menu5
+
+:y4
+cls
 goto menu
